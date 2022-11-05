@@ -1,0 +1,31 @@
+/* Load local font */
+
+@font-face {
+    font-family: "westFont";
+    src: url("logo_font.ttf");
+}
+
+p#west_logo {
+    position: absolute;
+}
+
+p.west_logo {
+    background: url("mask.png") 0;
+    font-size: 72px;
+    font-family: "westFont";
+    text-transform: capitalize;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #262626;
+}
+
+span.firstLetter {
+    text-transform: uppercase;
+    font-size: 92px;
+    vertical-align: middle;
+}
+
+p#secondary_west_logo {
+    text-shadow: 3px 2px 3px #000000;
+    top: -155px;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The-West Logo Generator</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="west.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+$(document).ready(function() {
+
+$('p').each( function(index, heading) {
+
+  const words = $(heading).text().split(' ')
+  let html = '';
+  
+  $.each(words, function() {
+    html += '<span class="firstLetter">'+this.substring(0,1)+'</span>'+this.substring(1) + ' ';
+  })
+  
+  $(heading).html(html);
+})
+
+});
+    </script>
+</head>
+<body>
+    <p class="west_logo" id="west_logo">speed world</p>
+</body>
+<script>
+    // Get the element
+    var elem = document.querySelector('#west_logo');
+    
+    // Create a copy of it
+    var clone = elem.cloneNode(true);
+    
+    // Update the ID and add a class
+    clone.id = 'secondary_west_logo';
+    // Inject it into the DOM
+    elem.after(clone);
+        </script>
+</html>
